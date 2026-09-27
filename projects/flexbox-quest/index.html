@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Quest — Mini Game UI</title>
+    <!-- Google Fonts for Game Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Back to Portfolio Navigation Banner -->
+    <nav class="portfolio-banner">
+        <a href="../../index.html" class="back-link">← Back to Portfolio</a>
+        <span class="banner-title">Scaler WebDev 101 • Assignment 02: Flexbox Quest</span>
+        <span class="student-credit">Ashirvad Srivastava (24BCS10462)</span>
+    </nav>
+
+    <!-- Part 3: Game Header -->
+    <header class="game-header">
+        <div class="logo-group">
+            <span class="game-icon">⚔️</span>
+            <h1>FLEXBOX QUEST</h1>
+        </div>
+
+        <div class="game-info">
+            <div class="info-pill"><span class="pill-label">LIVES:</span> <span class="pill-val">❤️❤️❤️</span></div>
+            <div class="info-pill"><span class="pill-label">COINS:</span> <span class="pill-val yellow">🪙 120</span></div>
+            <div class="info-pill"><span class="pill-label">SCORE:</span> <span class="pill-val green">⚡ 1250</span></div>
+            <div class="info-pill"><span class="pill-label">LEVEL:</span> <span class="pill-val purple">🛡️ 1</span></div>
+        </div>
+
+        <div class="header-actions">
+            <button class="btn btn-secondary" type="button">⏸ Pause</button>
+            <button class="btn btn-primary" type="button">⚙️ Menu</button>
+        </div>
+    </header>
+
+    <!-- Main Game Canvas & Panels -->
+    <main>
+        <!-- Part 4: Game Area -->
+        <section class="game-area">
+            <!-- Stage Message (Bonus 3) -->
+            <div class="game-message">
+                <span class="msg-icon">✨</span>
+                <span>QUEST ACTIVE: Collect all the stars to unlock the dungeon gate!</span>
+            </div>
+
+            <!-- Play Stage -->
+            <div class="stage-sky">
+                <!-- Sky Floating Row (Player & Star) -->
+                <div class="stage-top-row">
+                    <div class="player">
+                        <div class="entity-avatar">🧙‍♂️</div>
+                        <div class="entity-label">HERO (P1)</div>
+                    </div>
+
+                    <div class="star">
+                        <div class="entity-avatar animate-spin-slow">⭐</div>
+                        <div class="entity-label">STAR (+100)</div>
+                    </div>
+                </div>
+
+                <!-- Mid Platform Row -->
+                <div class="stage-mid-row">
+                    <div class="platform platform-floating">
+                        <span>🧱 MYSTIC PLATFORM 🧱</span>
+                    </div>
+                </div>
+
+                <!-- Ground Platform Row -->
+                <div class="stage-bottom-row">
+                    <div class="platform platform-ground">
+                        <span>🛡️ BASTION LEDGE</span>
+                    </div>
+
+                    <div class="enemy">
+                        <div class="entity-avatar">👾</div>
+                        <div class="entity-label">GOBLIN</div>
+                    </div>
+
+                    <div class="platform platform-ground">
+                        <span>🏰 CASTLE GATE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parts 5, 6, 7, 8: Game Panels (Controls, Inventory, Quest) -->
+        <section class="game-panels">
+            <!-- Controls Panel -->
+            <div class="panel controls-panel">
+                <div class="panel-header">
+                    <h2>🎮 CONTROLS</h2>
+                    <span class="panel-tag">DPAD</span>
+                </div>
+
+                <div class="dpad-container">
+                    <div class="dpad-row dpad-center">
+                        <button class="dpad-btn" type="button" aria-label="Up">▲</button>
+                    </div>
+                    <div class="dpad-row dpad-middle">
+                        <button class="dpad-btn" type="button" aria-label="Left">◀</button>
+                        <button class="dpad-btn dpad-center-hub" type="button">●</button>
+                        <button class="dpad-btn" type="button" aria-label="Right">▶</button>
+                    </div>
+                    <div class="dpad-row dpad-center">
+                        <button class="dpad-btn" type="button" aria-label="Down">▼</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons-group">
+                    <button class="btn btn-action btn-jump" type="button">⬆ JUMP</button>
+                    <button class="btn btn-action btn-attack" type="button">⚔ ATTACK</button>
+                </div>
+            </div>
+
+            <!-- Inventory Panel -->
+            <div class="panel inventory-panel">
+                <div class="panel-header">
+                    <h2>🎒 INVENTORY</h2>
+                    <span class="panel-tag">8 / 12 SLOTS</span>
+                </div>
+
+                <div class="inventory-grid">
+                    <div class="item rare">
+                        <span class="item-icon">🗡️</span>
+                        <span class="item-name">Sword</span>
+                    </div>
+                    <div class="item common">
+                        <span class="item-icon">🛡️</span>
+                        <span class="item-name">Shield</span>
+                    </div>
+                    <div class="item epic">
+                        <span class="item-icon">🧪</span>
+                        <span class="item-name">Potion</span>
+                    </div>
+                    <div class="item legendary">
+                        <span class="item-icon">🗝️</span>
+                        <span class="item-name">Key</span>
+                    </div>
+                    <div class="item common">
+                        <span class="item-icon">🏹</span>
+                        <span class="item-name">Bow</span>
+                    </div>
+                    <div class="item epic">
+                        <span class="item-icon">✨</span>
+                        <span class="item-name">Magic Elixir</span>
+                    </div>
+                    <div class="item common">
+                        <span class="item-icon">🗺️</span>
+                        <span class="item-name">World Map</span>
+                    </div>
+                    <div class="item legendary">
+                        <span class="item-icon">💎</span>
+                        <span class="item-name">Gem Coin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quest Panel -->
+            <div class="panel quest-panel">
+                <div class="panel-header">
+                    <h2>📜 ACTIVE QUESTS</h2>
+                    <span class="panel-tag">ACT 1</span>
+                </div>
+
+                <div class="quest-list">
+                    <div class="quest-item">
+                        <div class="quest-details">
+                            <span class="quest-bullet">⭐</span>
+                            <span class="quest-name">Collect 3 Stars</span>
+                        </div>
+                        <span class="quest-progress progress-active">1 / 3</span>
+                    </div>
+
+                    <div class="quest-item">
+                        <div class="quest-details">
+                            <span class="quest-bullet">🗝️</span>
+                            <span class="quest-name">Find Golden Key</span>
+                        </div>
+                        <span class="quest-progress progress-pending">0 / 1</span>
+                    </div>
+
+                    <div class="quest-item">
+                        <div class="quest-details">
+                            <span class="quest-bullet">👾</span>
+                            <span class="quest-name">Defeat Dungeon Monster</span>
+                        </div>
+                        <span class="quest-progress progress-pending">0 / 1</span>
+                    </div>
+
+                    <div class="quest-item quest-bonus">
+                        <div class="quest-details">
+                            <span class="quest-bullet">🪙</span>
+                            <span class="quest-name">Gather 200 Gold Coins</span>
+                        </div>
+                        <span class="quest-progress progress-active">120 / 200</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Part 10 & 12: Footer -->
+    <footer class="game-footer">
+        <div class="footer-left">
+            <span>Built strictly with <strong>Pure HTML & CSS Flexbox</strong> (No Grid, No Positioning, No JS).</span>
+        </div>
+        <div class="footer-right">
+            <span>Assignment 02 • Scaler School of Technology</span>
+        </div>
+    </footer>
+
+</body>
+</html>

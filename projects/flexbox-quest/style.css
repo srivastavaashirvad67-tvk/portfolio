@@ -1,0 +1,582 @@
+/* ========================================================
+   FLEXBOX QUEST — MINI GAME UI
+   Scaler WebDev 101: Assignment 02
+   Built purely with CSS Flexbox & Box Model
+   Rules: NO CSS Grid, NO position:absolute, NO position:fixed
+   ======================================================== */
+
+/* CSS Variables for RPG Arcade Theme */
+:root {
+    --bg-universe: #0d0f18;
+    --bg-header: #151926;
+    --bg-panel: #1b2032;
+    --bg-panel-hover: #222940;
+    --bg-stage: #101426;
+    
+    --border-main: #2b3350;
+    --border-bright: #44517d;
+    --border-gold: #f59e0b;
+    
+    --text-white: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-emerald: #10b981;
+    --accent-cyan: #06b6d4;
+    --accent-purple: #8b5cf6;
+    --accent-rose: #f43f5e;
+    --accent-amber: #fbbf24;
+}
+
+/* Reset & Box Model */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-universe);
+    color: var(--text-white);
+    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+}
+
+/* Portfolio Navigation Banner */
+.portfolio-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b0d14;
+    border: 1px solid var(--border-main);
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.back-link {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.banner-title {
+    color: #e2e8f0;
+    font-weight: 600;
+}
+
+.student-credit {
+    font-family: monospace;
+    color: var(--accent-amber);
+}
+
+/* ========================================================
+   Part 3: Game Header
+   ======================================================== */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-header);
+    border: 2px solid var(--border-bright);
+    border-radius: 12px;
+    padding: 16px 24px;
+    gap: 20px;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.game-icon {
+    font-size: 26px;
+}
+
+.logo-group h1 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    color: var(--accent-amber);
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+}
+
+.game-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.info-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-main);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pill-label {
+    color: var(--text-muted);
+}
+
+.pill-val.yellow { color: #fef08a; }
+.pill-val.green { color: #86efac; }
+.pill-val.purple { color: #d8b4fe; }
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Button Component Styles */
+.btn {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.btn-secondary {
+    background-color: #242c44;
+    color: #cbd5e1;
+    border-color: #3b4668;
+}
+
+.btn-secondary:hover {
+    background-color: #313c5e;
+    color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #4f46e5;
+    color: #ffffff;
+    border-color: #6366f1;
+}
+
+.btn-primary:hover {
+    background-color: #4338ca;
+}
+
+/* ========================================================
+   Part 4: Game Area
+   ======================================================== */
+.game-area {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-stage);
+    border: 2px solid var(--border-bright);
+    border-radius: 14px;
+    padding: 20px;
+    gap: 16px;
+    min-height: 280px;
+}
+
+.game-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #a7f3d0;
+}
+
+.stage-sky {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #131b33 0%, #1a2238 60%, #161c2e 100%);
+    border: 1px solid var(--border-main);
+    border-radius: 10px;
+    padding: 24px;
+    gap: 28px;
+}
+
+/* Top Floating Row: Hero & Star */
+.stage-top-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player, .star, .enemy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(0, 0, 0, 0.35);
+    border: 2px solid var(--border-bright);
+    border-radius: 12px;
+    padding: 10px 16px;
+}
+
+.player {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+}
+
+.star {
+    border-color: var(--accent-amber);
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+}
+
+.enemy {
+    border-color: var(--accent-rose);
+}
+
+.entity-avatar {
+    font-size: 28px;
+}
+
+.entity-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-family: monospace;
+}
+
+/* Mid Floating Platform */
+.stage-mid-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.platform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.platform-floating {
+    background-color: #2e2640;
+    border: 2px solid #a855f7;
+    color: #f3e8ff;
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.25);
+}
+
+/* Bottom Ground Row */
+.stage-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.platform-ground {
+    background-color: #1f2937;
+    border: 2px solid #4b5563;
+    color: #e5e7eb;
+    flex: 1;
+}
+
+/* ========================================================
+   Part 5, 6, 7, 8: Game Panels (Controls, Inventory, Quest)
+   ======================================================== */
+.game-panels {
+    display: flex;
+    gap: 16px;
+}
+
+.panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-panel);
+    border: 2px solid var(--border-main);
+    border-radius: 12px;
+    padding: 18px;
+    gap: 16px;
+}
+
+.panel:hover {
+    border-color: var(--border-bright);
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-main);
+    padding-bottom: 10px;
+}
+
+.panel-header h2 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.panel-tag {
+    font-size: 10px;
+    font-family: monospace;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: var(--text-muted);
+}
+
+/* Controls Panel */
+.dpad-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 0;
+}
+
+.dpad-row {
+    display: flex;
+    gap: 6px;
+}
+
+.dpad-btn {
+    width: 44px;
+    height: 44px;
+    background-color: #28314e;
+    border: 2px solid #3d4a73;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dpad-btn:hover {
+    background-color: #39466e;
+    border-color: var(--accent-cyan);
+}
+
+.dpad-btn:active {
+    background-color: #1a2238;
+}
+
+.dpad-center-hub {
+    background-color: #192033;
+    border-color: #2b3552;
+    color: #64748b;
+}
+
+.action-buttons-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-action {
+    flex: 1;
+    padding: 12px;
+}
+
+.btn-jump {
+    background-color: #059669;
+    border-color: #10b981;
+    color: #ffffff;
+}
+
+.btn-jump:hover {
+    background-color: #047857;
+}
+
+.btn-attack {
+    background-color: #dc2626;
+    border-color: #ef4444;
+    color: #ffffff;
+}
+
+.btn-attack:hover {
+    background-color: #b91c1c;
+}
+
+/* Inventory Panel */
+.inventory-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item {
+    flex: 1 1 calc(25% - 10px);
+    min-width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 6px;
+    background-color: #141828;
+    border: 2px solid var(--border-main);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.item:hover {
+    transform: translateY(-2px);
+    border-color: #ffffff;
+}
+
+.item.rare { border-color: #38bdf8; }
+.item.common { border-color: #94a3b8; }
+.item.epic { border-color: #c084fc; }
+.item.legendary { border-color: #fbbf24; }
+
+.item-icon {
+    font-size: 20px;
+}
+
+.item-name {
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    color: #e2e8f0;
+}
+
+/* Quest Panel */
+.quest-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quest-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #141828;
+    border: 1px solid var(--border-main);
+    border-radius: 8px;
+    padding: 12px 14px;
+    gap: 10px;
+}
+
+.quest-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quest-bullet {
+    font-size: 16px;
+}
+
+.quest-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.quest-progress {
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.progress-active {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.progress-pending {
+    background-color: rgba(148, 163, 184, 0.1);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+/* ========================================================
+   Part 10 & 12: Footer
+   ======================================================== */
+.game-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0c0e17;
+    border: 1px solid var(--border-main);
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.footer-left strong {
+    color: #ffffff;
+}
+
+.footer-right {
+    font-family: monospace;
+}
+
+/* ========================================================
+   Part 11: Responsive Media Query
+   ======================================================== */
+@media (max-width: 768px) {
+    .game-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .game-panels {
+        flex-direction: column;
+    }
+
+    .stage-bottom-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .portfolio-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .game-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal — Scaler WebDev 101 Assignment 01</title>
+    <style>
+        /* ========================================================
+           Scaler WebDev 101: Assignment 01
+           Student Portal (HTML + Introduction to CSS)
+           Rules: No JS, No frameworks, No Flexbox/Grid
+           ======================================================== */
+
+        /* Element Selector: Body */
+        body {
+            background-color: #f4f6fa;
+            color: #2d3748;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        /* Portfolio Return Banner */
+        .portfolio-nav-bar {
+            background-color: #1a202c;
+            color: #ffffff;
+            padding: 12px 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .portfolio-nav-bar a {
+            color: #63b3ed;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .portfolio-nav-bar a:hover {
+            text-decoration: underline;
+        }
+
+        /* 7.1 Text Color: Main Heading */
+        h1 {
+            color: #1e3a8a;
+            margin-bottom: 8px;
+            font-size: 28px;
+        }
+
+        /* 7.2 Section Heading Color */
+        h2 {
+            color: #065f46;
+            border-bottom: 2px solid #a7f3d0;
+            padding-bottom: 6px;
+            margin-top: 25px;
+        }
+
+        h3 {
+            color: #374151;
+            margin-top: 15px;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: #ffffff;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #2563eb;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+        /* Content Sections */
+        section {
+            background-color: #ffffff;
+            padding: 22px 28px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* 8.2 Class Selector: Highlight */
+        .highlight {
+            color: #059669;
+            font-weight: bold;
+        }
+
+        /* 8.3 ID Selector: Student Name */
+        #student-name {
+            color: #1d4ed8;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Bonus Challenge: Top Performer Badge */
+        .badge {
+            background-color: #fef08a;
+            color: #854d0e;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            border: 1px solid #facc15;
+            margin-left: 10px;
+            display: inline-block;
+        }
+
+        /* Tables Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            background-color: #ffffff;
+        }
+
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 10px 14px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Skills List */
+        ul {
+            padding-left: 25px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            color: #334155;
+            font-weight: 500;
+        }
+
+        /* Form Controls */
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            max-width: 450px;
+            padding: 9px 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 14px;
+            display: block;
+            margin-top: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #2563eb;
+            background-color: #f8fafc;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin-top: 6px;
+            margin-bottom: 14px;
+        }
+
+        .radio-option,
+        .checkbox-option {
+            margin-right: 18px;
+            font-weight: normal;
+            display: inline-block;
+        }
+
+        .form-buttons {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-right: 10px;
+            border: 1px solid transparent;
+        }
+
+        button[type="submit"] {
+            background-color: #2563eb;
+            color: #ffffff;
+            border-color: #1d4ed8;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #1d4ed8;
+        }
+
+        button[type="reset"] {
+            background-color: #e2e8f0;
+            color: #334155;
+            border-color: #cbd5e1;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #cbd5e1;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+            font-size: 13px;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back to Portfolio Link -->
+    <div class="portfolio-nav-bar">
+        <a href="../../index.html">← Back to Main Portfolio</a>
+        <span style="float: right;">Scaler WebDev 101 • Assignment 01: Student Portal</span>
+    </div>
+
+    <!-- Part 2: Header & Navigation -->
+    <header>
+        <h1>Student Portal</h1>
+        <p>Scaler School of Technology • Student Academic Dashboard & Registration</p>
+    </header>
+
+    <nav>
+        <a href="#profile">Profile</a>
+        <a href="#skills">Skills</a>
+        <a href="#schedule">Weekly Schedule</a>
+        <a href="#registration">Course Registration</a>
+    </nav>
+
+    <main>
+        <!-- Part 3: Student Profile Section -->
+        <section id="profile">
+            <h2>Student Profile</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Field</th>
+                        <th>Student Information</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>
+                            <span id="student-name">Ashirvad Srivastava</span>
+                            <span class="badge">Top Performer</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Student ID</td>
+                        <td class="highlight">24BCS10462</td>
+                    </tr>
+                    <tr>
+                        <td>Program</td>
+                        <td>Computer Science & Engineering (B.Tech)</td>
+                    </tr>
+                    <tr>
+                        <td>Year</td>
+                        <td>1st Year (Batch 2026–2030)</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>srivastavaashirvad67@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Part 4: My Skills Section -->
+        <section id="skills">
+            <h2>My Skills</h2>
+            <p>Core competencies in modern software and web development:</p>
+            <ul>
+                <li><strong class="highlight">HTML5</strong> — Semantic markup and forms</li>
+                <li><strong class="highlight">CSS3</strong> — Selectors, box model, and styling</li>
+                <li><strong>JavaScript</strong> — Front-end interactivity and scripts</li>
+                <li><strong>Python</strong> — Algorithmic logic and quantitative bots</li>
+                <li><strong>Git & GitHub</strong> — Version control and project collaboration</li>
+                <li><strong>Next.js & React</strong> — Component architectures and web apps</li>
+            </ul>
+        </section>
+
+        <!-- Part 5: Weekly Schedule Table -->
+        <section id="schedule">
+            <h2>Weekly Schedule</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>9:00 AM</th>
+                        <th>11:00 AM</th>
+                        <th>2:00 PM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Monday</strong></td>
+                        <td>HTML & CSS</td>
+                        <td>Mathematics</td>
+                        <td>Data Structures & Algorithms (DSA)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tuesday</strong></td>
+                        <td>CSS Layouts</td>
+                        <td>DBMS</td>
+                        <td>English Communication</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wednesday</strong></td>
+                        <td>JavaScript</td>
+                        <td>Data Structures & Algorithms (DSA)</td>
+                        <td>Mathematics</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Thursday</strong></td>
+                        <td>DBMS</td>
+                        <td>HTML Forms</td>
+                        <td>Capstone Project Lab</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Friday</strong></td>
+                        <td>DSA Lab</td>
+                        <td>CSS Advanced</td>
+                        <td>Technical Workshop & Review</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Part 6: Course Registration Form -->
+        <section id="registration">
+            <h2>Course Registration</h2>
+            <p>Enroll in upcoming academic courses and select your learning preferences:</p>
+
+            <form action="#" method="post">
+                <!-- Student Information -->
+                <div class="form-group">
+                    <label for="reg-name">Full Name:</label>
+                    <input type="text" id="reg-name" name="name" placeholder="Enter your full name" required value="Ashirvad Srivastava">
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-email">Email Address:</label>
+                    <input type="email" id="reg-email" name="email" placeholder="example@scaler.com" required value="srivastavaashirvad67@gmail.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-id">Student ID:</label>
+                    <input type="text" id="reg-id" name="student_id" placeholder="24BCS10462" required value="24BCS10462">
+                </div>
+
+                <!-- Course Selection Dropdown -->
+                <div class="form-group">
+                    <label for="reg-course">Select Course:</label>
+                    <select id="reg-course" name="course" required>
+                        <option value="" disabled selected>-- Select Course --</option>
+                        <option value="html-css">HTML & CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="dsa">Data Structures & Algorithms</option>
+                        <option value="dbms">Database Management Systems</option>
+                    </select>
+                </div>
+
+                <!-- Preferred Learning Mode (Radio Group) -->
+                <div class="form-group">
+                    <label>Preferred Learning Mode:</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" id="mode-online" name="learning_mode" value="online" checked> Online
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" id="mode-offline" name="learning_mode" value="offline"> Offline (Campus)
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Skills You Already Know (Checkboxes) -->
+                <div class="form-group">
+                    <label>Skills You Already Know:</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" id="skill-html" name="skills" value="html" checked> HTML
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" id="skill-css" name="skills" value="css" checked> CSS
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" id="skill-js" name="skills" value="javascript" checked> JavaScript
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" id="skill-python" name="skills" value="python" checked> Python
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Form Action Buttons -->
+                <div class="form-buttons">
+                    <button type="submit">Submit Registration</button>
+                    <button type="reset">Reset Form</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Part 1 & Footer -->
+    <footer>
+        <p>Scaler WebDev 101 • Assignment 01: Student Portal • Completed by <strong>Ashirvad Srivastava</strong></p>
+    </footer>
+
+</body>
+</html>

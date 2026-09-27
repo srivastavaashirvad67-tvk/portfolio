@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashirvad Srivastava — CSE Student | Web Developer | Aspiring Quant Engineer</title>
+    <meta name="description" content="Personal portfolio of Ashirvad Srivastava, First Year CSE student at Scaler School of Technology, Bengaluru. Web Developer and Aspiring Quant Engineer.">
+    <!-- Google Fonts for Modern Editorial Sans Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-studio text-white antialiased selection:bg-white selection:text-black">
+
+    <!-- Top Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-40 w-full px-6 py-5 md:px-12 backdrop-blur-md bg-studio-header transition-all duration-300">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between" aria-label="Main Navigation">
+            <a href="#home" class="brand-link group flex items-center gap-2 text-sm tracking-tight text-white/90 hover:text-white transition-colors duration-200">
+                <span class="font-mono text-xs opacity-60">©</span>
+                <span class="font-semibold tracking-wide">Code by Ashirvad</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-white/70">
+                <a href="#about" class="nav-item hover:text-white transition-colors duration-200">About</a>
+                <a href="#skills" class="nav-item hover:text-white transition-colors duration-200">Skills</a>
+                <a href="#projects" class="nav-item hover:text-white transition-colors duration-200">Projects</a>
+                <a href="#achievements" class="nav-item hover:text-white transition-colors duration-200">Achievements</a>
+                <a href="#education" class="nav-item hover:text-white transition-colors duration-200">Education</a>
+                <a href="#contact" class="nav-item hover:text-white transition-colors duration-200">Contact</a>
+            </div>
+
+            <div class="header-intro hidden lg:block text-right max-w-xs xl:max-w-sm text-xs leading-relaxed text-white/80">
+                Passionate CSE Student, Web Developer and Aspiring Quant Engineer building innovative financial technology and high-performance digital tools.
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========================================
+             Hero Section
+             ======================================== -->
+        <section id="home" class="relative min-h-screen flex flex-col justify-between pt-24 pb-28 md:pb-24 px-6 md:px-12 overflow-hidden hero-viewport">
+            <!-- Studio Background Subtle Vignette and Spotlight Overlay -->
+            <div class="absolute inset-0 studio-ambient-glow pointer-events-none" aria-hidden="true"></div>
+
+            <!-- Hero Top Row Meta -->
+            <div class="max-w-7xl mx-auto w-full pt-6 md:pt-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 z-10">
+                <div class="hero-badge inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider bg-black/20 border border-white/10 text-white/90 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Scaler School of Technology • First Year CSE
+                </div>
+                <div class="hero-location font-mono text-xs text-white/70 tracking-wide flex items-center gap-1.5">
+                    <span>Bengaluru, Karnataka</span>
+                    <span class="opacity-40">•</span>
+                    <span>Varanasi Roots</span>
+                </div>
+            </div>
+
+            <!-- Central Hero Visual: Portrait + Giant Typography -->
+            <div class="relative w-full max-w-6xl mx-auto flex-1 flex flex-col justify-center items-center my-4 md:my-0 z-10">
+                
+                <!-- Floating Right-side Editorial Marker (Inspired by Reference) -->
+                <div class="hero-tag-badge absolute right-4 md:right-8 lg:right-16 top-1/4 -translate-y-1/2 z-20 hidden sm:flex flex-col items-start gap-1 p-4 rounded-xl bg-black/30 backdrop-blur-md border border-white/10">
+                    <div class="text-2xl text-white font-light transform rotate-0">↘</div>
+                    <span class="text-xs uppercase tracking-widest text-white/60 font-mono">Discipline</span>
+                    <div class="text-sm font-semibold tracking-wide text-white">Aspiring Quant</div>
+                    <div class="text-sm font-light text-white/90">Engineer & Developer</div>
+                </div>
+
+                <!-- Giant Background Marquee Typography -->
+                <div class="hero-marquee-container w-full overflow-hidden select-none pointer-events-none absolute top-1/2 -translate-y-1/2 z-0 opacity-40">
+                    <div class="hero-marquee-track flex whitespace-nowrap">
+                        <span class="hero-marquee-text font-extrabold uppercase tracking-tighter text-white">
+                            CSE STUDENT & WEB DEVELOPER • QUANT ENGINEER • 
+                        </span>
+                        <span class="hero-marquee-text font-extrabold uppercase tracking-tighter text-white">
+                            CSE STUDENT & WEB DEVELOPER • QUANT ENGINEER • 
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Portrait Frame (Using User's Supplied Personal Photo) -->
+                <div class="hero-portrait-wrapper relative z-10">
+                    <div class="hero-portrait-glow" aria-hidden="true"></div>
+                    <div class="hero-portrait-card">
+                        <img 
+                            src="profile.jpg" 
+                            alt="Ashirvad Srivastava — CSE Student and Aspiring Quant Engineer" 
+                            class="hero-portrait-image"
+                        >
+                    </div>
+                    <!-- Minimalist Name Plate -->
+                    <div class="portrait-name-plate">
+                        <h1 class="text-base md:text-lg font-bold tracking-tight text-white">Ashirvad Srivastava</h1>
+                        <p class="text-xs text-white/70 font-mono">Web Developer • Aspiring Quant Engineer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Bottom Info Strip -->
+            <div class="max-w-7xl mx-auto w-full flex flex-col sm:flex-row justify-between items-center gap-4 z-10 text-xs text-white/70">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-white/40">EXPLORE PORTFOLIO</span>
+                    <span class="inline-block animate-bounce text-sm">↓</span>
+                </div>
+                <div class="flex items-center gap-6 font-mono text-white/60">
+                    <span>Next.js & React</span>
+                    <span class="opacity-30">/</span>
+                    <span>Quantitative Logic</span>
+                    <span class="opacity-30">/</span>
+                    <span>Algorithmic Bots</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================
+             About Section
+             ======================================== -->
+        <section id="about" class="relative py-28 px-6 md:px-12 bg-studio-dark border-t border-white/10">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="flex items-center gap-3 mb-16">
+                    <span class="font-mono text-xs text-emerald-400 tracking-widest uppercase">01 // PROFILE</span>
+                    <div class="h-px bg-white/10 flex-1"></div>
+                    <h2 class="text-sm font-mono uppercase tracking-widest text-white/50">About Me</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    <!-- Left Column: Big Statement -->
+                    <div class="lg:col-span-6 space-y-6">
+                        <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight text-white">
+                            Bridging quantitative logic, modern web technology, and financial innovation.
+                        </h3>
+                        <p class="text-base text-white/75 leading-relaxed">
+                            I am a First Year Computer Science Engineering student at <strong class="text-white">Scaler School of Technology, Bengaluru</strong> (originally from Varanasi, UP). My technical drive lies at the intersection of full-stack web engineering and quantitative finance.
+                        </p>
+                        <p class="text-sm text-white/60 leading-relaxed">
+                            Whether creating gamified financial mentoring applications like <span class="text-white/80">FinWise</span> or engineering algorithmic trading bots in Python, I focus on building structured, data-driven systems with clean user experiences.
+                        </p>
+                    </div>
+
+                    <!-- Right Column: Focus Cards -->
+                    <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="stat-card p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all duration-300">
+                            <span class="text-xs font-mono text-white/50 uppercase tracking-wider block mb-2">Current Campus</span>
+                            <h4 class="text-lg font-semibold text-white mb-1">Scaler School of Tech</h4>
+                            <p class="text-xs text-white/70 leading-relaxed">Electronic City, Bengaluru. B.Tech CSE (Batch 2026–2030, First Year).</p>
+                        </div>
+
+                        <div class="stat-card p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all duration-300">
+                            <span class="text-xs font-mono text-white/50 uppercase tracking-wider block mb-2">Analytical Foundation</span>
+                            <h4 class="text-lg font-semibold text-white mb-1">ISI Stage 1 Qualified</h4>
+                            <p class="text-xs text-white/70 leading-relaxed">Demonstrated aptitude in higher mathematics and statistical reasoning.</p>
+                        </div>
+
+                        <div class="stat-card p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all duration-300">
+                            <span class="text-xs font-mono text-white/50 uppercase tracking-wider block mb-2">Core Focus</span>
+                            <h4 class="text-lg font-semibold text-white mb-1">Quant & Web Dev</h4>
+                            <p class="text-xs text-white/70 leading-relaxed">Next.js, React, Tailwind CSS, coupled with Python quantitative bot engineering.</p>
+                        </div>
+
+                        <div class="stat-card p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all duration-300">
+                            <span class="text-xs font-mono text-white/50 uppercase tracking-wider block mb-2">Roots</span>
+                            <h4 class="text-lg font-semibold text-white mb-1">Varanasi, UP</h4>
+                            <p class="text-xs text-white/70 leading-relaxed">Proud alumnus of Sant Atulanand Convent School with 85% in Class 12th PCM.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================
+             Skills Section
+             ======================================== -->
+        <section id="skills" class="relative py-28 px-6 md:px-12 bg-studio-darker border-t border-white/10">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="flex items-center gap-3 mb-16">
+                    <span class="font-mono text-xs text-emerald-400 tracking-widest uppercase">02 // CAPABILITIES</span>
+                    <div class="h-px bg-white/10 flex-1"></div>
+                    <h2 class="text-sm font-mono uppercase tracking-widest text-white/50">Technical Skills</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Category 1: Frontend Development -->
+                    <div class="skill-category-card p-8 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-lg font-bold text-white tracking-tight">Frontend Stack</h3>
+                            <span class="font-mono text-xs text-white/40">01</span>
+                        </div>
+                        <p class="text-xs text-white/60 mb-6 leading-relaxed">Modern web ecosystem utilized for building modular, high-speed, and interactive client applications.</p>
+                        
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill">Next.js 14</span>
+                            <span class="skill-pill">React</span>
+                            <span class="skill-pill">Tailwind CSS</span>
+                            <span class="skill-pill">JavaScript</span>
+                            <span class="skill-pill">HTML5</span>
+                            <span class="skill-pill">CSS3</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Tools & Platforms -->
+                    <div class="skill-category-card p-8 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-lg font-bold text-white tracking-tight">Tools & Platforms</h3>
+                            <span class="font-mono text-xs text-white/40">02</span>
+                        </div>
+                        <p class="text-xs text-white/60 mb-6 leading-relaxed">Version control, continuous deployment, and development platforms for frictionless shipping.</p>
+                        
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill">Git</span>
+                            <span class="skill-pill">GitHub</span>
+                            <span class="skill-pill">Vercel Deployment</span>
+                            <span class="skill-pill">VS Code</span>
+                            <span class="skill-pill">Google Ads Tooling</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Quantitative & Interests -->
+                    <div class="skill-category-card p-8 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-lg font-bold text-white tracking-tight">Specialization & Focus</h3>
+                            <span class="font-mono text-xs text-white/40">03</span>
+                        </div>
+                        <p class="text-xs text-white/60 mb-6 leading-relaxed">Interests and currently developing capabilities in quantitative engineering and algorithmic trading.</p>
+                        
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill">Python (Learning)</span>
+                            <span class="skill-pill">Trading Bot Logic</span>
+                            <span class="skill-pill">Quantitative Engineering</span>
+                            <span class="skill-pill">Financial Technology</span>
+                            <span class="skill-pill">Mathematical Modeling</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================
+             Projects Section (3 User Projects)
+             ======================================== -->
+        <section id="projects" class="relative py-28 px-6 md:px-12 bg-studio-dark border-t border-white/10">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="flex items-center gap-3 mb-16">
+                    <span class="font-mono text-xs text-emerald-400 tracking-widest uppercase">03 // SELECTED WORKS</span>
+                    <div class="h-px bg-white/10 flex-1"></div>
+                    <h2 class="text-sm font-mono uppercase tracking-widest text-white/50">Featured Projects</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1: FinWise / Smartwise -->
+                    <article class="project-card group relative flex flex-col justify-between p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/25 transition-all duration-300">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="font-mono text-xs text-white/40">PROJECT // 01</span>
+                                <span class="text-xs font-mono px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">Live Production</span>
+                            </div>
+                            
+                            <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight group-hover:text-emerald-300 transition-colors duration-200 mb-3">
+                                FinWise / Smartwise
+                            </h3>
+                            
+                            <p class="text-sm text-white/70 leading-relaxed mb-6">
+                                A comprehensive, gamified financial mentor and expense tracker web app designed for students and first-time earners. Includes XP/level gamification, simulated stock market watchlist, AI mentor chat, EMI/SIP calculators, Splitter group sharing, and budget alerts.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="project-tag">Next.js 14</span>
+                                <span class="project-tag">Tailwind CSS</span>
+                                <span class="project-tag">Vercel</span>
+                                <span class="project-tag">FinTech</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-white/10 flex items-center justify-between text-xs">
+                            <span class="text-white/50 font-mono">Live Web App</span>
+                            <a href="https://gradient-rush-lovat.vercel.app/dashboard" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-black font-semibold hover:bg-neutral-200 transition-all duration-200">
+                                Live Demo <span class="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: SpeakStreak -->
+                    <article class="project-card group relative flex flex-col justify-between p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/25 transition-all duration-300">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="font-mono text-xs text-white/40">PROJECT // 02</span>
+                                <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-white/80 border border-white/10">Communication App</span>
+                            </div>
+                            
+                            <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight group-hover:text-emerald-300 transition-colors duration-200 mb-3">
+                                SpeakStreak
+                            </h3>
+                            
+                            <p class="text-sm text-white/70 leading-relaxed mb-6">
+                                A speaking-practice web application that presents random speaking prompts, times dynamic practice sessions (60–120 seconds), and tracks consecutive daily streaks to consistently build confident vocal communication skills.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="project-tag">Next.js</span>
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">Tailwind CSS</span>
+                                <span class="project-tag">Vercel</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-white/10 flex items-center justify-between text-xs">
+                            <span class="text-white/50 font-mono">Web Application</span>
+                            <a href="https://github.com/srivastavaashirvad67-tvk" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-white font-medium hover:text-emerald-400 transition-colors">
+                                GitHub Source <span class="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Flexbox Quest Mini Game UI -->
+                    <article class="project-card group relative flex flex-col justify-between p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/25 transition-all duration-300">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="font-mono text-xs text-white/40">PROJECT // 03</span>
+                                <span class="text-xs font-mono px-3 py-1 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20">Arcade UI • Assignment 02</span>
+                            </div>
+                            
+                            <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight group-hover:text-emerald-300 transition-colors duration-200 mb-3">
+                                Flexbox Quest — Mini Game UI
+                            </h3>
+                            
+                            <p class="text-sm text-white/70 leading-relaxed mb-6">
+                                A retro fantasy arcade game interface built strictly following Scaler WebDev 101 Assignment 02 specs using 100% pure CSS Flexbox (zero CSS Grid, zero positioning hacks, zero frameworks). Features a responsive Game Header, Game Arena, DPAD Controls, 8-Slot Inventory, and Active Quests panel.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="project-tag">Pure CSS Flexbox</span>
+                                <span class="project-tag">Box Model</span>
+                                <span class="project-tag">Responsive UI</span>
+                                <span class="project-tag">Game Design</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-white/10 flex items-center justify-between text-xs">
+                            <span class="text-white/50 font-mono">projects/flexbox-quest</span>
+                            <a href="projects/flexbox-quest/index.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-black font-semibold hover:bg-neutral-200 transition-all duration-200">
+                                Launch Quest UI <span class="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Student Portal (Assignment 01) -->
+                    <article class="project-card group relative flex flex-col justify-between p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/25 transition-all duration-300">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="font-mono text-xs text-white/40">PROJECT // 04</span>
+                                <span class="text-xs font-mono px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">Academic Portal • Assignment 01</span>
+                            </div>
+                            
+                            <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight group-hover:text-emerald-300 transition-colors duration-200 mb-3">
+                                Student Portal & Course Registration
+                            </h3>
+                            
+                            <p class="text-sm text-white/70 leading-relaxed mb-6">
+                                Built according to Scaler WebDev 101 Assignment 01 requirements using semantic HTML5 and foundational CSS. Features student profile with Top Performer badge, weekly schedule table, skills inventory, and a course registration form with radio and checkbox controls.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="project-tag">HTML5 Semantic</span>
+                                <span class="project-tag">Introductory CSS</span>
+                                <span class="project-tag">Forms & Tables</span>
+                                <span class="project-tag">Box Model</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-white/10 flex items-center justify-between text-xs">
+                            <span class="text-white/50 font-mono">projects/student-portal</span>
+                            <a href="projects/student-portal/index.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-black font-semibold hover:bg-neutral-200 transition-all duration-200">
+                                View Portal <span class="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Python Trading Bot -->
+                    <article class="project-card group relative flex flex-col justify-between p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/25 transition-all duration-300 md:col-span-2">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="font-mono text-xs text-white/40">PROJECT // 05</span>
+                                <span class="text-xs font-mono px-3 py-1 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/20">In Development</span>
+                            </div>
+                            
+                            <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight group-hover:text-emerald-300 transition-colors duration-200 mb-3">
+                                Python Algorithmic Trading Bot
+                            </h3>
+                            
+                            <p class="text-sm text-white/70 leading-relaxed mb-6">
+                                An algorithmic trading bot currently under active engineering in Python, dedicated to implementing quantitative rules, market data analysis, and mathematical logic to automate signal evaluation and execution strategies.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Quant Logic</span>
+                                <span class="project-tag">Market APIs</span>
+                                <span class="project-tag">Automation</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-white/10 flex items-center justify-between text-xs">
+                            <span class="text-white/50 font-mono">Quant Engineering Focus</span>
+                            <a href="https://github.com/srivastavaashirvad67-tvk" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-white font-medium hover:text-emerald-400 transition-colors">
+                                Repository <span class="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================
+             Achievements & Certifications Section
+             ======================================== -->
+        <section id="achievements" class="relative py-28 px-6 md:px-12 bg-studio-darker border-t border-white/10">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="flex items-center gap-3 mb-16">
+                    <span class="font-mono text-xs text-emerald-400 tracking-widest uppercase">04 // RECOGNITION</span>
+                    <div class="h-px bg-white/10 flex-1"></div>
+                    <h2 class="text-sm font-mono uppercase tracking-widest text-white/50">Achievements & Exams</h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Achievement 1 -->
+                    <div class="stat-card p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all duration-300">
+                        <div class="text-emerald-400 font-mono text-xs uppercase tracking-wider mb-2">Competitive Entrance</div>
+                        <h3 class="text-lg font-bold text-white mb-2">Qualified ISI Stage 1</h3>
+                        <p class="text-xs text-white/70 leading-relaxed">
+                            Successfully qualified Stage 1 of the prestigious Indian Statistical Institute (ISI) Entrance Examination, demonstrating strong statistical reasoning.
+                        </p>
+                    </div>
+
+                    <!-- Achievement 2 -->
+                    <div class="stat-card p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all duration-300">
+                        <div class="text-emerald-400 font-mono text-xs uppercase tracking-wider mb-2">National Examination</div>
+                        <h3 class="text-lg font-bold text-white mb-2">UGEE — IIIT Hyderabad</h3>
+                        <p class="text-xs text-white/70 leading-relaxed">
+                            Appeared for the Under Graduate Engineering Entrance Examination (UGEE) conducted by IIIT Hyderabad, testing advanced logical and analytical research aptitude.
+                        </p>
+                    </div>
+
+                    <!-- Achievement 3 -->
+                    <div class="stat-card p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all duration-300">
+                        <div class="text-emerald-400 font-mono text-xs uppercase tracking-wider mb-2">Industry Certification</div>
+                        <h3 class="text-lg font-bold text-white mb-2">Google Ads Certification</h3>
+                        <p class="text-xs text-white/70 leading-relaxed">
+                            Official certification credential issued by Google validating digital advertising strategies, campaign optimization, and performance analytics.
+                        </p>
+                    </div>
+
+                    <!-- Achievement 4 -->
+                    <div class="stat-card p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all duration-300">
+                        <div class="text-emerald-400 font-mono text-xs uppercase tracking-wider mb-2">Leadership & Execution</div>
+                        <h3 class="text-lg font-bold text-white mb-2">Event Organizing Lead</h3>
+                        <p class="text-xs text-white/70 leading-relaxed">
+                            Active organizing experience with the Events Department at school, managing logistics, team coordination, and student engagement activities.
+                        </p>
+                    </div>
+
+                    <!-- Achievement 5 -->
+                    <div class="stat-card p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all duration-300 sm:col-span-2 lg:col-span-2">
+                        <div class="text-emerald-400 font-mono text-xs uppercase tracking-wider mb-2">Academic Certifications</div>
+                        <h3 class="text-lg font-bold text-white mb-2">Multiple School & Academic Honors</h3>
+                        <p class="text-xs text-white/70 leading-relaxed">
+                            Earned numerous academic and extracurricular certifications throughout school tenure in mathematics, science competitions, and institutional forums.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================
+             Education Section
+             ======================================== -->
+        <section id="education" class="relative py-28 px-6 md:px-12 bg-studio-dark border-t border-white/10">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="flex items-center gap-3 mb-16">
+                    <span class="font-mono text-xs text-emerald-400 tracking-widest uppercase">05 // ACADEMICS</span>
+                    <div class="h-px bg-white/10 flex-1"></div>
+                    <h2 class="text-sm font-mono uppercase tracking-widest text-white/50">Education</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Academic Item 1: Scaler School of Technology -->
+                    <div class="education-card p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Undergraduate Degree</span>
+                            <h3 class="text-xl md:text-2xl font-bold text-white tracking-tight">Scaler School of Technology, Bengaluru</h3>
+                            <p class="text-sm text-white/70 font-medium">B.Tech in Computer Science Engineering (Batch 2026–2030)</p>
+                            <p class="text-xs text-white/50 leading-relaxed max-w-xl">
+                                Currently in First Year, Electronic City campus. Rigorous industry-focused CS curriculum with intensive focus on software engineering, problem solving, and modern development.
+                            </p>
+                        </div>
+                        <div class="md:text-right font-mono text-xs text-white/60 space-y-1 shrink-0">
+                            <div class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 inline-block text-emerald-300">Currently First Year</div>
+                            <div class="text-white/40">Electronic City, Bengaluru</div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Item 2: Class 12th Sant Atulanand -->
+                    <div class="education-card p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Senior Secondary (Class 12th)</span>
+                            <h3 class="text-xl md:text-2xl font-bold text-white tracking-tight">Sant Atulanand Convent School, Varanasi, UP</h3>
+                            <p class="text-sm text-white/70 font-medium">PCM Stream (Physics, Chemistry, Mathematics)</p>
+                            <p class="text-xs text-white/50 leading-relaxed max-w-xl">
+                                Completed with <strong class="text-white">85% aggregate</strong>, building strong analytical foundation in higher mathematics, mechanics, and science.
+                            </p>
+                        </div>
+                        <div class="md:text-right font-mono text-xs text-white/60 space-y-1 shrink-0">
+                            <div class="px-3 py-1 rounded-full bg-white/5 border border-white/10 inline-block text-white/80">Score: 85%</div>
+                            <div class="text-white/40">Varanasi, UP</div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Item 3: Class 10th Sant Atulanand -->
+                    <div class="education-card p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Secondary (Class 10th)</span>
+                            <h3 class="text-xl md:text-2xl font-bold text-white tracking-tight">Sant Atulanand Convent School, Varanasi, UP</h3>
+                            <p class="text-sm text-white/70 font-medium">All Core Disciplines</p>
+                            <p class="text-xs text-white/50 leading-relaxed max-w-xl">
+                                Graduated secondary school with an outstanding score of <strong class="text-white">91% aggregate</strong>.
+                            </p>
+                        </div>
+                        <div class="md:text-right font-mono text-xs text-white/60 space-y-1 shrink-0">
+                            <div class="px-3 py-1 rounded-full bg-white/5 border border-white/10 inline-block text-white/80">Score: 91%</div>
+                            <div class="text-white/40">Varanasi, UP</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================
+             Contact Section
+             ======================================== -->
+        <section id="contact" class="relative py-28 px-6 md:px-12 bg-studio-darker border-t border-white/10">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="flex items-center gap-3 mb-16">
+                    <span class="font-mono text-xs text-emerald-400 tracking-widest uppercase">06 // REACH OUT</span>
+                    <div class="h-px bg-white/10 flex-1"></div>
+                    <h2 class="text-sm font-mono uppercase tracking-widest text-white/50">Contact</h2>
+                </div>
+
+                <div class="p-8 sm:p-12 md:p-16 rounded-3xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/10 text-center relative overflow-hidden">
+                    <div class="max-w-2xl mx-auto space-y-6">
+                        <span class="font-mono text-xs text-emerald-400 uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 inline-block">
+                            Available For Collaborations & Internships
+                        </span>
+                        
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                            Let's connect & build something exceptional.
+                        </h2>
+                        
+                        <p class="text-sm md:text-base text-white/70 leading-relaxed">
+                            Interested in discussions around Quantitative Engineering, Financial Tech, Web Development, or student engineering projects.
+                        </p>
+
+                        <!-- Contact Badges / Numbers -->
+                        <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-white/80 py-2">
+                            <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 flex items-center gap-2">
+                                <span>📍 Electronic City, Bengaluru (Varanasi, UP)</span>
+                            </div>
+                            <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 flex items-center gap-2">
+                                <span>📞 +91 6306522674</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <!-- Direct Email Link -->
+                            <a href="mailto:srivastavaashirvad67@gmail.com" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-black font-semibold text-sm hover:bg-neutral-200 transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-white/10">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span>srivastavaashirvad67@gmail.com</span>
+                            </a>
+
+                            <!-- LinkedIn Link -->
+                            <a href="https://www.linkedin.com/in/ashirvad-srivastava-a10a2341a" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-semibold text-sm border border-white/15 hover:bg-white/15 transition-all duration-200 hover:scale-105 active:scale-95">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                <span>LinkedIn Profile</span>
+                            </a>
+
+                            <!-- GitHub Profile Link -->
+                            <a href="https://github.com/srivastavaashirvad67-tvk" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-semibold text-sm border border-white/15 hover:bg-white/15 transition-all duration-200 hover:scale-105 active:scale-95">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                                </svg>
+                                <span>GitHub Profile</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================
+         Floating Dock Navigation (Exact match to Reference + LinkedIn)
+         ======================================== -->
+    <aside class="floating-dock-wrapper" aria-label="Quick Dock Navigation">
+        <nav class="floating-dock" aria-label="Bottom Dock Bar">
+            <!-- Home -->
+            <a href="#home" class="dock-button" aria-label="Go to Home section">
+                <svg class="dock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                </svg>
+                <span class="dock-tooltip">Home</span>
+            </a>
+
+            <!-- Terminal / Code (About) -->
+            <a href="#about" class="dock-button" aria-label="Go to About section">
+                <svg class="dock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                <span class="dock-tooltip">About</span>
+            </a>
+
+            <!-- 3D Cube / Skills -->
+            <a href="#skills" class="dock-button" aria-label="Go to Skills section">
+                <svg class="dock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                </svg>
+                <span class="dock-tooltip">Skills</span>
+            </a>
+
+            <!-- Avatar / Persona -->
+            <a href="#home" class="dock-button dock-avatar-btn" aria-label="Developer Avatar">
+                <span class="dock-avatar-frame">
+                    <img src="profile.jpg" alt="Avatar" class="dock-avatar-img">
+                </span>
+                <span class="dock-tooltip">Ashirvad</span>
+            </a>
+
+            <!-- Projects (Folder/Layers) -->
+            <a href="#projects" class="dock-button" aria-label="Go to Projects section">
+                <svg class="dock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                </svg>
+                <span class="dock-tooltip">Projects</span>
+            </a>
+
+            <!-- Achievements / Star -->
+            <a href="#achievements" class="dock-button" aria-label="Go to Achievements section">
+                <svg class="dock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                </svg>
+                <span class="dock-tooltip">Honors</span>
+            </a>
+
+            <!-- Education / Document -->
+            <a href="#education" class="dock-button" aria-label="Go to Education section">
+                <svg class="dock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5"/>
+                </svg>
+                <span class="dock-tooltip">Education</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/ashirvad-srivastava-a10a2341a" target="_blank" rel="noopener noreferrer" class="dock-button" aria-label="Visit LinkedIn Profile">
+                <svg class="dock-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span class="dock-tooltip">LinkedIn</span>
+            </a>
+
+            <!-- GitHub External -->
+            <a href="https://github.com/srivastavaashirvad67-tvk" target="_blank" rel="noopener noreferrer" class="dock-button" aria-label="Visit GitHub Profile">
+                <svg class="dock-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                </svg>
+                <span class="dock-tooltip">GitHub</span>
+            </a>
+
+            <!-- Contact Link -->
+            <a href="#contact" class="dock-button" aria-label="Go to Contact section">
+                <svg class="dock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+                <span class="dock-tooltip">Contact</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- ========================================
+         Footer
+         ======================================== -->
+    <footer class="py-12 px-6 md:px-12 bg-black border-t border-white/10 text-white/50 text-xs">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="font-mono">
+                Designed & Built with HTML & CSS • <span class="text-white/80">Ashirvad Srivastava</span>
+            </div>
+            <div class="flex items-center gap-6 font-mono">
+                <a href="#home" class="hover:text-white transition-colors">Back to top ↑</a>
+                <span>Electronic City, Bengaluru</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
